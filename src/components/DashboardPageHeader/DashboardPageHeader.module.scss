@@ -1,0 +1,11 @@
+.base {
+  @apply flex items-center justify-between mb-6;
+
+  .title {
+    @apply font-medium text-lg;
+  }
+
+  .search {
+    @apply w-1/2;
+  }
+}

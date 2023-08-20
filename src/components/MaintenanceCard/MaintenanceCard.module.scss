@@ -1,0 +1,78 @@
+.base {
+  @apply border rounded p-3 space-y-4;
+
+  .header {
+    @apply flex items-center;
+
+    .handle {
+      @apply mr-4 py-2;
+
+      svg {
+        @apply h-4 w-4;
+      }
+    }
+
+    .details {
+      .code {
+        @apply font-medium text-sm;
+      }
+
+      .category {
+        @apply text-sm;
+      }
+    }
+
+    .status_chip {
+      @apply ml-auto;
+    }
+  }
+
+  .location {
+    @apply flex justify-between text-xs py-2 border-y;
+
+    .title {
+      @apply text-slate-500;
+    }
+  }
+
+  .description {
+    p {
+      @apply text-sm;
+    }
+  }
+
+  .users {
+    @apply flex space-x-8;
+
+    .author,
+    .assigned {
+      @apply flex items-center;
+
+      .avatar {
+        @apply h-10 w-10 bg-slate-100 rounded-full mr-2;
+      }
+
+      .details {
+        .title {
+          @apply text-xs font-medium text-slate-500;
+        }
+
+        .name {
+          @apply text-sm;
+        }
+      }
+    }
+  }
+
+  .images {
+    @apply flex space-x-4;
+
+    .image {
+      @apply h-20 w-20 bg-slate-100 rounded-lg relative;
+
+      img {
+        @apply object-cover rounded-lg;
+      }
+    }
+  }
+}

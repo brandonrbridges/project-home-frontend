@@ -1,0 +1,54 @@
+.base {
+  @apply bg-slate-900;
+
+  .call_to_action {
+    @apply container py-16 space-y-8 border-b border-b-slate-800;
+
+    > * {
+      @apply w-full md:w-3/5;
+    }
+
+    .title {
+      @apply text-white font-medium text-5xl;
+
+      .highlight {
+        @apply text-eggplant-100;
+      }
+    }
+
+    .description {
+      @apply text-slate-300;
+    }
+  }
+
+  .content {
+    @apply container text-slate-200 py-16;
+  }
+
+  .footer {
+    @apply bg-slate-950 text-slate-400 text-xs py-2;
+
+    .wrapper {
+      @apply container;
+      @apply grid grid-cols-3;
+
+      .first_column,
+      .middle_column,
+      .last_column {
+        @apply flex items-center space-x-4;
+      }
+
+      .first_column {
+        @apply justify-start;
+      }
+
+      .middle_column {
+        @apply justify-center;
+      }
+
+      .last_column {
+        @apply justify-end;
+      }
+    }
+  }
+}

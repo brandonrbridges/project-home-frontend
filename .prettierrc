@@ -1,0 +1,9 @@
+{
+	"arrowParens": "always",
+	"bracketSameLine": false,
+	"bracketSpacing": true,
+	"semi": false,
+	"singleAttributePerLine": true,
+	"singleQuote": true,
+	"trailingComma": "all"
+}

@@ -1,0 +1,11 @@
+.base {
+  @apply flex flex-col;
+
+  main {
+    @apply flex grow relative overflow-y-scroll;
+
+    .content {
+      @apply p-4 w-full;
+    }
+  }
+}

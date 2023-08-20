@@ -1,0 +1,15 @@
+.base {
+  @apply bg-slate-900 py-2;
+
+  .content {
+    @apply container text-slate-200 text-sm text-center flex items-center justify-center space-x-4;
+
+    a {
+      @apply underline transition-colors;
+
+      &:hover {
+        @apply text-eggplant-500 no-underline;
+      }
+    }
+  }
+}

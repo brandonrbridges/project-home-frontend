@@ -1,0 +1,11 @@
+.base {
+  @apply flex space-x-4;
+
+  .image {
+    @apply h-48 w-48 rounded-lg bg-slate-200;
+  }
+
+  .title {
+    @apply text-xl font-semibold;
+  }
+}

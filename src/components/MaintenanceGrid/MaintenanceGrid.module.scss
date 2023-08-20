@@ -1,0 +1,13 @@
+.base {
+  @apply grid grid-cols-3 gap-4;
+
+  .column {
+    .title {
+      @apply mb-2 text-slate-500 text-sm font-medium;
+    }
+
+    .children {
+      @apply space-y-4;
+    }
+  }
+}

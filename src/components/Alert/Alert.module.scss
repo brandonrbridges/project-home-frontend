@@ -1,0 +1,20 @@
+.base {
+  @apply px-4 py-2 rounded shadow-md;
+  @apply flex items-start justify-start;
+
+  .icon {
+    @apply mr-2 w-6 h-6;
+  }
+
+  &.success {
+    @apply border-green-50 bg-green-100 text-green-800;
+  }
+
+  &.warning {
+    @apply border-yellow-50 bg-yellow-100 text-yellow-800;
+  }
+
+  &.error {
+    @apply bg-gradient-to-r from-rose-400 to-rose-500 text-rose-50 shadow-rose-200;
+  }
+}

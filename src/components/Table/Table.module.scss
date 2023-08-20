@@ -1,0 +1,21 @@
+.base {
+  .header {
+    @apply px-2;
+  }
+
+  .body {
+    @apply space-y-1;
+
+    .row {
+      @apply flex border rounded-sm py-1;
+
+      .cell {
+        @apply text-slate-500 px-2;
+      }
+    }
+  }
+
+  .footer {
+    @apply px-2;
+  }
+}

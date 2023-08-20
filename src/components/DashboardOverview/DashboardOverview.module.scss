@@ -1,0 +1,64 @@
+.base {
+  @apply grid grid-cols-5 gap-4;
+
+  .column_1,
+  .column_2 {
+    @apply space-y-4;
+  }
+
+  .column_1 {
+    @apply col-span-2;
+  }
+
+  .column_2 {
+    @apply col-span-3;
+  }
+
+  .payment_information {
+    @apply grid grid-cols-4 gap-4;
+
+    .value {
+      @apply text-lg font-medium;
+    }
+
+    .tag {
+      @apply text-slate-500 text-sm;
+    }
+  }
+
+  .maintenance_requests {
+    @apply w-full;
+
+    .row {
+      @apply transition-colors;
+
+      &:hover {
+        @apply bg-slate-50;
+      }
+
+      .column {
+        @apply py-1;
+
+        &:first-child {
+          @apply pl-2 rounded-l;
+        }
+
+        &:last-child {
+          @apply pr-2 rounded-r;
+        }
+
+        p {
+          @apply text-sm;
+        }
+
+        .user {
+          @apply flex items-center space-x-2;
+
+          .avatar {
+            @apply h-6 w-6 rounded-full bg-slate-200;
+          }
+        }
+      }
+    }
+  }
+}

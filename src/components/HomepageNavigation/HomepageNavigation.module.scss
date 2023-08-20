@@ -1,0 +1,24 @@
+.base {
+  @apply border-b sticky top-0 bg-white py-2 z-50;
+
+  .content {
+    @apply container grid grid-cols-3 items-center;
+
+    .logo {
+      @apply h-12 w-36 relative;
+      // @apply bg-slate-100 rounded;
+    }
+
+    .links {
+      @apply flex mx-auto space-x-10;
+    }
+
+    .action {
+      @apply text-right;
+
+      button {
+        @apply ml-auto;
+      }
+    }
+  }
+}

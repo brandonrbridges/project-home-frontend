@@ -1,0 +1,11 @@
+.base {
+  @apply bg-slate-100 py-24;
+
+  .content {
+    @apply container grid grid-cols-2;
+
+    .title {
+      @apply text-3xl font-semibold;
+    }
+  }
+}

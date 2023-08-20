@@ -1,0 +1,40 @@
+.base {
+  @apply rounded-full w-fit px-2;
+  @apply bg-slate-100 text-sm; // default styles
+
+  &.sm {
+    @apply text-xs;
+  }
+
+  &.md {
+    @apply text-sm;
+  }
+
+  &.lg {
+    @apply text-base;
+  }
+
+  &.primary {
+    @apply bg-eggplant-400 text-white;
+  }
+
+  &.secondary {
+    @apply bg-slate-500 text-white;
+  }
+
+  &.tertiary {
+    @apply bg-slate-100 text-slate-500;
+  }
+
+  &.emerald {
+    @apply bg-emerald-100 text-emerald-900;
+  }
+
+  &.orange {
+    @apply bg-orange-500 text-white;
+  }
+
+  &.sky {
+    @apply bg-sky-500 text-white;
+  }
+}

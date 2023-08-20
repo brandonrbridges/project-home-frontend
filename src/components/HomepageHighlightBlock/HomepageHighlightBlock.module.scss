@@ -1,0 +1,19 @@
+.base {
+  @apply relative pt-24 pb-48 bg-eggplant;
+
+  .content {
+    @apply container text-white;
+
+    .title {
+      @apply text-3xl font-semibold;
+    }
+  }
+
+  .boxes {
+    @apply absolute bottom-0 left-0 flex justify-around w-full space-x-8 px-8;
+
+    .box {
+      @apply h-36 w-36 rounded bg-white bg-opacity-10;
+    }
+  }
+}

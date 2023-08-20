@@ -1,0 +1,57 @@
+.base {
+  @apply flex flex-col items-center justify-center mx-auto space-y-4 relative;
+  @apply py-36;
+  @apply w-full md:w-1/2; // responsive
+
+  .title {
+    @apply text-4xl font-semibold text-center;
+
+    .decorative {
+      @apply font-bold font-decorative text-5xl;
+    }
+  }
+
+  .description {
+    @apply text-lg text-center;
+  }
+
+  .testimonials {
+    @apply absolute left-0 top-0 h-full w-full -z-10;
+
+    .testimonial {
+      @apply absolute w-fit;
+
+      .content {
+        @apply bg-white border border-slate-100 shadow-lg shadow-slate-100 p-4 rounded max-w-xs;
+
+        .tag {
+          @apply bg-orange-100 w-fit px-2 text-sm font-medium py-0.5 rounded-full;
+        }
+
+        .quote {
+          @apply mt-1;
+        }
+      }
+
+      .avatar {
+        @apply h-14 w-14 rounded-full bg-slate-200 mt-2 mx-auto;
+      }
+
+      &.testimonial1 {
+        @apply -left-52 top-10 rotate-[10deg];
+      }
+
+      &.testimonial2 {
+        @apply -right-72 top-10 -rotate-[6deg];
+      }
+
+      &.testimonial3 {
+        @apply -left-60 bottom-10 -rotate-[8deg];
+      }
+
+      &.testimonial4 {
+        @apply -right-64 bottom-10 rotate-[4deg];
+      }
+    }
+  }
+}

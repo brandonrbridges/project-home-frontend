@@ -1,0 +1,21 @@
+.base {
+  @apply max-h-8 h-full border-t px-4;
+  @apply flex items-center justify-between;
+
+  a {
+    @apply text-xs text-slate-500;
+
+    &:hover {
+      @apply text-eggplant-500;
+    }
+  }
+
+  p {
+    @apply text-xs text-slate-500;
+  }
+
+  .left,
+  .right {
+    @apply flex items-center space-x-8;
+  }
+}

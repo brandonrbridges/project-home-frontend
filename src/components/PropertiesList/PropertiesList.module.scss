@@ -1,0 +1,9 @@
+.base {
+  .list {
+    @apply space-y-4;
+
+    .list_item {
+      @apply grid grid-cols-4;
+    }
+  }
+}
