@@ -3,7 +3,14 @@
     @apply space-y-4;
 
     .list_item {
-      @apply grid grid-cols-4;
+      @apply grid grid-cols-4 px-2 py-1.5;
+      @apply border border-transparent rounded;
+      @apply transition-colors;
+
+      &:hover {
+        @apply bg-slate-50;
+        @apply border-slate-100;
+      }
     }
   }
 }

@@ -72,7 +72,9 @@ export const User = () => {
         <p className={styles.name}>
           {user?.name.first} {user?.name.last}
         </p>
-        {user?.role && <p className={styles.account_type}>{user.role}</p>}
+        {user?.roles.length && (
+          <p className={styles.account_type}>{user.roles[0]}</p>
+        )}
       </div>
     </div>
   )
@@ -94,7 +96,7 @@ export const UserLinks = () => {
 
   return (
     <div className={styles.links}>
-      {user?.role === 'administrator' && (
+      {user?.roles.includes('administrator') && (
         <Link href="/dashboard/administrator">
           <IconKey />
         </Link>

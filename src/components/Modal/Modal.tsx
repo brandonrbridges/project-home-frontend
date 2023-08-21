@@ -1,33 +1,21 @@
-// React
-import { createPortal } from 'react-dom'
+// Styles
+import styles from './Modal.module.scss'
 
-interface ModalWrapperProps {
-  children: React.ReactNode
-  closeModal: () => void
-}
-
-const ModalWrapper = (props: ModalWrapperProps) => {
-  return createPortal(
-    <div
-      className=""
-      onClick={props.closeModal}
-    >
-      {props.children}
-    </div>,
-    document.getElementById('portal') as HTMLElement,
-  )
-}
+// Client Components
+import { ModalWrapper } from './Modal.client'
 
 interface ModalProps {
+  children: React.ReactNode
   closeModal: () => void
 }
 
 const Modal = (props: ModalProps) => {
   return (
-    <ModalWrapper closeModal={props.closeModal}>
-      <div className="">
+    <ModalWrapper>
+      <div className={styles.base}>
         <h3>Modal</h3>
         <p>Modal content</p>
+        {props.children}
       </div>
     </ModalWrapper>
   )

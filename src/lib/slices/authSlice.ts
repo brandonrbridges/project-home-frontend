@@ -4,18 +4,13 @@ import { StateCreator } from 'zustand'
 // Helpers
 import { fetcher } from '@/helpers/api'
 
+// Types
+import { IUser } from '@/types/user.types'
+
 export interface AuthState {
   accessToken: string | null
   refreshToken: string | null
-  user: {
-    _id: string
-    email: string
-    name: {
-      first: string
-      last: string
-    }
-    role: string
-  } | null
+  user: IUser | null
 }
 
 export interface AuthSlice {

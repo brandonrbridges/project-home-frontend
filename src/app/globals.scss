@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply relative;
+
+  #modal-portal {
+    @apply pointer-events-none;
+    @apply absolute left-0 top-0 w-full h-screen;
+  }
+
+  #sidepanel-portal {
+    @apply pointer-events-none;
+    @apply absolute right-0 top-0 w-full h-full z-10;
+  }
+}
+
 button {
   @apply bg-slate-100 rounded px-2 py-1 transition-colors;
 

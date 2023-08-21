@@ -1,0 +1,17 @@
+.wrapper {
+  @apply pointer-events-auto;
+  @apply absolute right-0 top-0 h-full max-w-sm w-full;
+  @apply bg-slate-50 p-4;
+}
+
+.base {
+  @apply z-20;
+
+  .header {
+    @apply flex items-center justify-between mb-4;
+
+    .title {
+      @apply font-semibold;
+    }
+  }
+}

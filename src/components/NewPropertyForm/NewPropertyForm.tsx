@@ -35,12 +35,7 @@ const NewPropertyForm = () => {
       type: '',
       bedrooms: 0,
       bathrooms: 0,
-      rent: {
-        amount: 0,
-        start_date: '',
-        frequency: '',
-      },
-      deposit: 0,
+      max_tenants: 0,
     },
   })
 
@@ -112,28 +107,12 @@ const NewPropertyForm = () => {
           />
         </div>
 
-        <p>Financials</p>
+        <p>Other</p>
         <div className="grid grid-cols-3 gap-4">
           <Form.TextInput
-            id="rent.amount"
-            label="How much is rent?"
-            register={register('rent.amount')}
-          />
-          <Form.DateInput
-            id="rent.start_date"
-            label="When does rent start?"
-            register={register('rent.start_date')}
-          />
-          <Form.SelectInput
-            id="rent.frequency"
-            label="How often is rent due?"
-            register={register('rent.frequency')}
-            options={['weekly', 'biweekly', 'monthly', 'yearly']}
-          />
-          <Form.TextInput
-            id="deposit"
-            label="Deposit"
-            register={register('deposit')}
+            id="max_tenants"
+            label="Max Tenants"
+            register={register('max_tenants')}
           />
         </div>
 

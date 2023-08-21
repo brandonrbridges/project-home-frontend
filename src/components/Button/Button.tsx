@@ -10,7 +10,7 @@ import classNames from 'classnames'
 interface ButtonProps {
   children: React.ReactNode
   type?: 'button' | 'submit' | 'reset'
-  variant?: 'primary' | 'secondary' | 'tertiary'
+  variant?: 'primary' | 'secondary' | 'tertiary' | 'danger'
   icon?: React.ReactNode
   iconAlign?: 'left' | 'right'
   className?: string
@@ -39,6 +39,7 @@ const Button = (props: ButtonProps) => {
           [styles.primary]: variant === 'primary',
           [styles.secondary]: variant === 'secondary',
           [styles.tertiary]: variant === 'tertiary',
+          [styles.danger]: variant === 'danger',
         },
         {
           [styles.has_icon]: props.icon,

@@ -34,7 +34,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={classNames(inter.className, marck.variable)}>
         {children}
-        <div id="portal" />
+        <div id="modal-portal" />
       </body>
     </html>
   )

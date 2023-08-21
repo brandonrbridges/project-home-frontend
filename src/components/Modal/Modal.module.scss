@@ -1,0 +1,11 @@
+.wrapper {
+  @apply absolute h-screen w-full z-50;
+  @apply flex items-center justify-center;
+  @apply bg-slate-950/50;
+}
+
+.base {
+  @apply w-full max-w-2xl;
+  @apply mx-auto;
+  @apply bg-white border border-slate-300 rounded-lg drop-shadow-2xl;
+}

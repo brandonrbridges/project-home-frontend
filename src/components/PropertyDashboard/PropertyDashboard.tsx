@@ -2,9 +2,9 @@
 import styles from './PropertyDashboard.module.scss'
 
 // Components
+import Button from '../Button'
 import Card from '../Card'
 import TenantInviteForm from '../TenantInviteForm'
-import Button from '../Button'
 
 // Server Components
 import { DocumentList } from './PropertyDashboard.server'
@@ -35,14 +35,7 @@ const PropertyDashboard = (props: PropertyDashboardProps) => {
         <Card.Body>Property Dashboard</Card.Body>
       </Card>
       <Card>
-        <Card.Title>Finances</Card.Title>
-        <Card.Body>
-          <p>
-            Rent: {props.data.rent.amount && '£' + props.data.rent.amount}{' '}
-            {props.data.rent.frequency}
-          </p>
-          <p>Deposit: {props.data.deposit && '£' + props.data.deposit}</p>
-        </Card.Body>
+        <Card.Title>Pending</Card.Title>
       </Card>
     </div>
   )

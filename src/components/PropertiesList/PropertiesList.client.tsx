@@ -40,8 +40,7 @@ export const List = () => {
         <p>
           {property.address.line_1}, {property.address.postal_code}
         </p>
-        <p>{property.owner_id}</p>
-        <p>{property._id}</p>
+        <p>{property.owner.name.first + ' ' + property.owner.name.last}</p>
       </div>
     </Link>
   ))

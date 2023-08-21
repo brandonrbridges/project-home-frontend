@@ -7,7 +7,6 @@ import { List } from './PropertiesList.client'
 const PropertiesList = () => {
   return (
     <div className={styles.base}>
-      properties list
       <div className={styles.list}>
         <List />
       </div>

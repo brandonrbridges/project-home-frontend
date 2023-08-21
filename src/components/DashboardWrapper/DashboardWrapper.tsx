@@ -20,6 +20,8 @@ const DashboardWrapper = (props: DashboardWrapperProps) => {
         <DashboardSidebar />
 
         <div className={styles.content}>{props.children}</div>
+
+        <div id="sidepanel-portal" />
       </main>
       <DashboardFooter />
     </PageHeightWrapper>

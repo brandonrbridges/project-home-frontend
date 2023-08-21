@@ -29,6 +29,14 @@
     }
   }
 
+  &.danger {
+    @apply bg-rose-500 text-white;
+
+    &:hover {
+      @apply bg-rose-700;
+    }
+  }
+
   &.has_icon {
     @apply flex items-center justify-center;
 
