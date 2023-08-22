@@ -11,6 +11,8 @@ import Button from '../Button'
 
 // Packages
 import { motion } from 'framer-motion'
+
+// Icons
 import { IconX } from '@tabler/icons-react'
 
 interface SidepanelProps {

@@ -14,10 +14,22 @@ interface TextInputProps {
   label?: string
   type?: 'email' | 'password' | 'text' | 'number'
   register?: UseFormRegisterReturn
+  textarea?: boolean
 }
 
 const TextInput = (props: TextInputProps) => {
   const type = props.type || 'text'
+
+  if (props.textarea)
+    return (
+      <div className={classNames(styles.text_input)}>
+        <label htmlFor={props.id}>{props.label}</label>
+        <textarea
+          id={props.id}
+          {...props.register}
+        />
+      </div>
+    )
 
   return (
     <div className={classNames(styles.text_input)}>

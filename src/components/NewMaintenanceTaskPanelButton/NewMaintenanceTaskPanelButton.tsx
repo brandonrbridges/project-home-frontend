@@ -5,25 +5,25 @@ import { useState } from 'react'
 
 // Components
 import Button from '../Button'
-import NewPropertyForm from '../NewPropertyForm'
+import NewMaintenanceTaskForm from '../NewMaintenanceTask'
 import Sidepanel from '../Sidepanel'
 
-const NewPropertyPanelButton = () => {
+const NewMaintenanceTaskPanelButton = () => {
   const [isPanelOpen, setIsPanelOpen] = useState(false)
 
   const handleClick = () => setIsPanelOpen((state) => !state)
 
   return (
     <>
-      <Button onClick={handleClick}>Add New Property</Button>
+      <Button onClick={handleClick}>Add Maintenance Task</Button>
 
       {isPanelOpen && (
         <Sidepanel onClose={handleClick}>
-          <NewPropertyForm />
+          <NewMaintenanceTaskForm />
         </Sidepanel>
       )}
     </>
   )
 }
 
-export default NewPropertyPanelButton
+export default NewMaintenanceTaskPanelButton

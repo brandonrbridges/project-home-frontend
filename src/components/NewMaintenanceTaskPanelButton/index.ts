@@ -1,0 +1,3 @@
+import NewMaintenanceTaskPanelButton from './NewMaintenanceTaskPanelButton'
+
+export default NewMaintenanceTaskPanelButton

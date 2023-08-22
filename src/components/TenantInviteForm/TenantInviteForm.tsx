@@ -20,6 +20,7 @@ import styles from './TenantInviteForm.module.scss'
 
 // Components
 import Button from '../Button'
+import CancelTenantInviteFlow from '../CancelTenantInviteFlow'
 import Form from '../Form'
 
 // React Hook Form
@@ -93,12 +94,7 @@ const TenantInviteForm = () => {
         </p>
         <Button.Container justify="end">
           <Button icon={<IconBell />}>Send Reminder</Button>
-          <Button
-            variant="danger"
-            icon={<IconX />}
-          >
-            Cancel Invite
-          </Button>
+          <CancelTenantInviteFlow />
         </Button.Container>
       </div>
     )

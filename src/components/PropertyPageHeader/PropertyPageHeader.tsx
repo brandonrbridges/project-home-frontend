@@ -3,6 +3,7 @@ import styles from './PropertyPageHeader.module.scss'
 
 // Components
 import Button from '../Button'
+import NewMaintenanceTaskPanelButton from '../NewMaintenanceTaskPanelButton'
 
 interface PropertyPageHeaderProps {
   address: {
@@ -30,7 +31,7 @@ const PropertyPageHeader = (props: PropertyPageHeaderProps) => {
         <p>Status: Vacant</p>
 
         <Button.Container justify="start">
-          <Button>Add Maintenance Task</Button>
+          <NewMaintenanceTaskPanelButton />
           <Button>Upload a Document</Button>
         </Button.Container>
       </div>

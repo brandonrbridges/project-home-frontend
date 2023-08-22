@@ -5,7 +5,6 @@
 }
 
 .base {
-  @apply w-full max-w-2xl;
-  @apply mx-auto;
-  @apply bg-white border border-slate-300 rounded-lg drop-shadow-2xl;
+  @apply w-full max-w-2xl mx-auto;
+  @apply bg-white border border-slate-300 rounded-lg drop-shadow-2xl pointer-events-auto;
 }

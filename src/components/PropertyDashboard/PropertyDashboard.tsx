@@ -1,6 +1,9 @@
 // Styles
 import styles from './PropertyDashboard.module.scss'
 
+// Helpers
+import { fetcher } from '@/helpers/api'
+
 // Components
 import Button from '../Button'
 import Card from '../Card'
@@ -13,7 +16,9 @@ interface PropertyDashboardProps {
   data: any
 }
 
-const PropertyDashboard = (props: PropertyDashboardProps) => {
+const PropertyDashboard = async (props: PropertyDashboardProps) => {
+  const tasks = await fetcher.GET('/maintenance-tasks')
+
   return (
     <div className={styles.base}>
       <div className={styles.column}>
@@ -32,7 +37,7 @@ const PropertyDashboard = (props: PropertyDashboardProps) => {
       </div>
       <Card>
         <Card.Title>Maintenance</Card.Title>
-        <Card.Body>Property Dashboard</Card.Body>
+        <Card.Body>{JSON.stringify(tasks)}</Card.Body>
       </Card>
       <Card>
         <Card.Title>Pending</Card.Title>
