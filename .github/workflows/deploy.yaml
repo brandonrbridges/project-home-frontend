@@ -1,0 +1,37 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Build and push Docker Image
+        run: |
+          docker build -t project-home-frontend .
+          docker tag project-home-frontend ${{ secrets.DOCKER_USERNAME }}/project-home-frontend:latest
+          echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
+          docker push ${{ secrets.DOCKER_USERNAME }}/project-home-frontend:latest
+
+      - name: SSH into VPS and deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.PRIVATE_KEY }}
+          script: |
+            docker stop project-home-frontend || true
+            docker rm project-home-frontend || true
+            docker pull ${{ secrets.DOCKER_USERNAME }}/project-home-frontend:latest
+            docker image prune --force
+            docker run -d --name project-home-frontend \
+              -p 3000:3000 \
+              ${{ secrets.DOCKER_USERNAME }}/project-home-frontend:latest
